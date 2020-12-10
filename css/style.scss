@@ -81,6 +81,7 @@ main {
   display: grid;
   grid-template-columns: 10% 90%;
   .pokemon__types {
+    z-index: 5;
     height: 100%;
     width: 100%;
     overflow-y: scroll;
@@ -305,6 +306,94 @@ main {
               transform: translateY(-50%);
             }
           }
+        }
+      }
+    }
+  }
+
+  .more-info {
+    height: 60rem;
+    width: 80rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+   .more-info__container {
+     height: 100%;
+     width: 100%;
+     display: grid;
+     grid-template-rows: 60% 30% 10%;
+     .part__1 {
+       height: 100%;
+       width: 100%;
+       overflow-y: scroll;
+       .moves {
+         display: grid;
+        //  flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         grid-template-columns: repeat(2, 1fr);
+         height: 100%;
+         margin: 2rem 0;
+         width: 100%;
+          span {
+            text-transform: capitalize;
+            font-size: 3rem;
+            margin: 1rem;
+            padding: 0.3rem 3rem;
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      .part__2 {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-left: 2rem;
+        .strong,
+        .weak {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          h3 {
+            font-size: 2.5rem;
+          }
+          h4 {
+            display: flex;
+            display: grid;
+            overflow: hidden;
+            grid-template-columns: repeat(4, 1fr);
+            margin-right: 5rem;
+            span {
+              margin-top: 1rem;
+              margin-right: 1rem;
+              padding: 0.3rem 1rem;
+              text-align: center;
+              font-size: 1.5rem;
+              font-weight: 500;
+              background-color: antiquewhite;
+            }
+          }
+        }
+      }
+      .part__3 {
+        display: flex;
+        align-items: center;
+        button {
+          font-size: 2rem;
+          padding: 0.2rem 1rem;
+          border: none;
+          margin: 1rem;
+          cursor: pointer;
+          outline: none;
         }
       }
     }

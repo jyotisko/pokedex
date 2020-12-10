@@ -110,6 +110,7 @@ main {
 }
 
 main .pokemon__types {
+  z-index: 5;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -450,5 +451,135 @@ main .pokemon__info #info .pokemon .part__3 a img {
   right: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+main .more-info {
+  height: 60rem;
+  width: 80rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+main .more-info .more-info__container {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 30% 10%;
+      grid-template-rows: 60% 30% 10%;
+}
+
+main .more-info .more-info__container .part__1 {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+main .more-info .more-info__container .part__1 .moves {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+main .more-info .more-info__container .part__1 .moves span {
+  text-transform: capitalize;
+  font-size: 3rem;
+  margin: 1rem;
+  padding: 0.3rem 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+main .more-info .more-info__container .part__2 {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+}
+
+main .more-info .more-info__container .part__2 .strong,
+main .more-info .more-info__container .part__2 .weak {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+main .more-info .more-info__container .part__2 .strong h3,
+main .more-info .more-info__container .part__2 .weak h3 {
+  font-size: 2.5rem;
+}
+
+main .more-info .more-info__container .part__2 .strong h4,
+main .more-info .more-info__container .part__2 .weak h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-right: 5rem;
+}
+
+main .more-info .more-info__container .part__2 .strong h4 span,
+main .more-info .more-info__container .part__2 .weak h4 span {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: antiquewhite;
+}
+
+main .more-info .more-info__container .part__3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .more-info .more-info__container .part__3 button {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

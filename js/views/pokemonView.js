@@ -4,7 +4,6 @@ class PokemonView {
   _parentContainer = document.querySelector('#info');
 
   renderMarkupPokemon(data) {
-    // console.log(data);
     const markup = `
     <div class="pokemon" data-id="${data.id}">
       <div class="part__1">
@@ -75,7 +74,7 @@ class PokemonView {
         </div>
       </div>
       <div class="part__3">
-        <a href="#">Show info <img src="../../images/pokeball.svg"></a>
+        <a data-id="${data.id}" data-moves="${data.moves}" data-type="${data.types[0]}" href="#" class="more-info-btn">Show info <img src="../../images/pokeball.svg"></a>
       </div>
     </div>
     `;

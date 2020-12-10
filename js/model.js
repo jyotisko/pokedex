@@ -1,5 +1,4 @@
 export const getPokemonsByType = async type => {
-
   const response = await fetch(`https://pokeapi.co/api/v2/type/${type}/`);
   const data = await response.json();
 
@@ -20,7 +19,8 @@ export const getPokemonsByType = async type => {
       defense: [data.stats[2].stat.name, data.stats[2].base_stat],
       specialAttack: [data.stats[3].stat.name, data.stats[3].base_stat],
       specialDefense: [data.stats[4].stat.name, data.stats[4].base_stat],
-      speed: [data.stats[5].stat.name, data.stats[5].base_stat]
+      speed: [data.stats[5].stat.name, data.stats[5].base_stat],
+      moves: data.moves.map(move => move.move.name),
     };
   });
 
@@ -45,14 +45,21 @@ export const getPokemonByName = async name => {
       defense: [data.stats[2].stat.name, data.stats[2].base_stat],
       specialAttack: [data.stats[3].stat.name, data.stats[3].base_stat],
       specialDefense: [data.stats[4].stat.name, data.stats[4].base_stat],
-      speed: [data.stats[5].stat.name, data.stats[5].base_stat]
+      speed: [data.stats[5].stat.name, data.stats[5].base_stat],
+      moves: data.moves.map(move => move.move.name),
     }
 
   } catch (err) {
     console.log(`${err} 💥💥💥`);
-    throw new Error(err);
+    throw new Error('No pokemon found!');
   }
 };
 
+export const getPokemonById = async id => {
+  try {
 
+  } catch (err) {
+    console.log(`${err} 💥💥💥`);
+  }
+};
 

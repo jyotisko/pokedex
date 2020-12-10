@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
   <script src="./js/controller.js" defer type="module"></script>
 </head>
 
@@ -29,7 +30,7 @@
       <section id="types">
         <div class="types">
           <ul class="types-ul">
-            <li style="background-color: blue; color: #ffffff;">All</li>
+            <!-- <li style="background-color: blue; color: #ffffff;">All</li> -->
             <li style="color: #A8A8A8; text-decoration: underline #A8A8A8;" data-color="#A8A8A8" data-id="1">Normal</li>
             <li style="color: #C03028; text-decoration: underline #C03028;" data-color="#C03028" data-id="2">Fighting
             </li>
@@ -61,8 +62,8 @@
 
     <div class="pokemon__info">
       <section id="info">
-
-        <!-- <div class="pokemon">
+        <!-- 
+        <div class="pokemon">
           <div class="part__1">
             <figure>
               <div class="height-weight">
@@ -134,9 +135,31 @@
             <a href="#">Show info <img src="./images/pokeball.svg"></a>
           </div>
         </div> -->
-
       </section>
     </div>
+
+    <!-- <div class="more-info">
+      <div class="more-info__container">
+        <div class="part__1">
+          <div class="moves">
+            <span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span><span>Hui</span>
+          </div>
+        </div>
+        <div class="part__2">
+          <div class="strong">
+            <h3>Strong Against:</h3>
+            <h4><span>Water</span><span>Fire</span><span>Ground</span></h4>
+          </div>
+          <div class="weak">
+            <h3>Weak Against:</h3>
+            <h4><span>Water</span><span>Fire</span><span>Ground</span></h4>
+          </div>
+        </div>
+        <div class="part__3">
+          <button class="close">⬅ Close</button>
+        </div>
+      </div>
+    </div> -->
   </main>
 </body>
 

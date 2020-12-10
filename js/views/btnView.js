@@ -2,6 +2,7 @@ class BtnHover {
   _parentElUl = document.querySelector('.types-ul');
   _searchBar = document.querySelector('.search-btn');
   _pokemonName = document.querySelector('.pokemon-name');
+  _parentPokemonContainer = document.querySelector('#info');
 
   addHoverEffect() {
     const self = this;
@@ -40,6 +41,17 @@ class BtnHover {
       self._pokemonName.value = '';
       if (!query) return;
       handler(`${query[0].toLowerCase()}${query.slice(1)}`);
+    });
+  }
+
+  addHandlerMoreInfo(handler) {
+    this._parentPokemonContainer.addEventListener('click', e => {
+      const btn = e.target.closest('.more-info-btn');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const moves = btn.dataset.moves;
+      const type = btn.dataset.type;
+      handler(id, type, moves);
     });
   }
 
