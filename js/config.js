@@ -1,0 +1,1 @@
+export const statisticBarColors = ['#DE4141', '#F59700'];

@@ -1,0 +1,5 @@
+Reference: https://pokedex-ak.netlify.app/
+
+Pokemon based on type: https://pokeapi.co/api/v2/type/3/
+Pokemon info based on id: https://pokeapi.co/api/v2/pokemon/16/
+

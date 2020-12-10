@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/controller.js" defer type="module"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__container">
+      <div class="part__1">
+        <img src="./images/logo.svg" alt="Pokedex">
+      </div>
+      <div class="part__2">
+        <div class="search">
+          <input class="pokemon-name" type="text" autofocus placeholder="Search For Pokemon..."><a class="search-btn"
+            href="#">Search</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="pokemon__types">
+      <section id="types">
+        <div class="types">
+          <ul class="types-ul">
+            <li style="background-color: blue; color: #ffffff;">All</li>
+            <li style="color: #A8A8A8; text-decoration: underline #A8A8A8;" data-color="#A8A8A8" data-id="1">Normal</li>
+            <li style="color: #C03028; text-decoration: underline #C03028;" data-color="#C03028" data-id="2">Fighting
+            </li>
+            <li style="color: rgb(144,150,241); text-decoration: underline rgb(144,150,241);"
+              data-color="rgb(144,150,241)" data-id="3">Flying</li>
+            <li style="color: rgb(160,64,168); text-decoration: underline rgb(160,64,168);" data-color="rgb(160,64,168)"
+              data-id="4">Poison</li>
+            <li style="color: #B8A070; text-decoration: underline #B8A070;" data-color="#B8A070" data-id="5">Ground</li>
+            <li style="color: #F8F7F7; text-decoration: underline #F8F7F7;" data-color="#F8F7F7" data-id="6">Rock</li>
+            <li style="color: #705898; text-decoration: underline #705898;" data-color="#705898" data-id="7">Bug</li>
+            <li style="color: #6D8F9C; text-decoration: underline #6D8F9C;" data-color="#6D8F9C" data-id="8">Ghost</li>
+            <li style="color: #9CB820; text-decoration: underline #9CB820;" data-color="#9CB820" data-id="9">Steel</li>
+            <li style="color: #F08030; text-decoration: underline #F08030;" data-color="#F08030" data-id="10">Fire</li>
+            <li style="color: #6890F0; text-decoration: underline #6890F0;" data-color="#6890F0" data-id="11">Water</li>
+            <li style="color: #22C086; text-decoration: underline #22C086;" data-color="#22C086" data-id="12">Grass</li>
+            <li style="color: #FFCC66; text-decoration: underline #FFCC66;" data-color="#FFCC66" data-id="13">Electric
+            </li>
+            <li style="color: #FA4D9C; text-decoration: underline #FA4D9C;" data-color="#FA4D9C" data-id="14">Psychic
+            </li>
+            <li style="color: #B1E5F7; text-decoration: underline #B1E5F7;" data-color="#B1E5F7" data-id="15">Ice</li>
+            <li style="color: #7038F8; text-decoration: underline #7038F8;" data-color="#7038F8" data-id="16">Dragon
+            </li>
+            <li style="color: #504843; text-decoration: underline #504843;" data-color="#504843" data-id="17">Dark</li>
+            <li style="color: #F09ADA; text-decoration: underline #F09ADA;" data-color="#F09ADA" data-id="18">Fairy</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="pokemon__info">
+      <section id="info">
+
+        <!-- <div class="pokemon">
+          <div class="part__1">
+            <figure>
+              <div class="height-weight">
+                <div class="height circle">3m</div>
+                <div class="weight circle">3kg</div>
+              </div>
+              <div class="image">
+                <div class="id-number">#15</div>
+                <img class="pokemon-image" src="./images/logo.png" alt="Pokemon">
+              </div>
+              <div class="name-main-type">
+                <h2 class="name">Pikachu</h2>
+                <h3 class="main-type">Electric Pokemon</h3>
+                <h3 class="other-type"><span>Electric</span></h3>
+              </div>
+              <div class="other-types">
+                <h3><span>Blaze</span> <span>Blaze</span></h3>
+              </div>
+            </figure>
+          </div>
+
+          <div class="part__2">
+            <div class="stats__info">
+              <div class="hp stat">
+                <h3 class="name">HP</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+              <div class="attack stat">
+                <h3 class="name">Attack</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+              <div class="defense stat">
+                <h3 class="name">Defense</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+              <div class="special-attack stat">
+                <h3 class="name">Special-Attack</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+              <div class="special-defense stat">
+                <h3 class="name">Special-Defense</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+              <div class="speed stat">
+                <h3 class="name">Speed</h3>
+                <h3 class="value">27</h3>
+                <div class="chart">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part__3">
+            <a href="#">Show info <img src="./images/pokeball.svg"></a>
+          </div>
+        </div> -->
+
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
