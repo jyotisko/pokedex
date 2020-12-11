@@ -510,6 +510,7 @@ main .more-info .more-info__container .part__1 .moves {
 }
 
 main .more-info .more-info__container .part__1 .moves span {
+  cursor: pointer;
   text-transform: capitalize;
   font-size: 3rem;
   margin: 1rem;
@@ -723,7 +724,24 @@ main .more-info .more-info__container .part__3 button {
     -ms-grid-rows: 10% 90%;
         grid-template-rows: 10% 90%;
   }
+  main .pokemon__types {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  main .pokemon__types #types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 60rem;
+  }
   main .pokemon__types #types .types {
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -737,9 +755,10 @@ main .more-info .more-info__container .part__3 button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0 2rem;
   }
   main .pokemon__types #types .types ul li {
-    margin: 0 1rem;
+    margin-left: 1.5rem;
   }
 }
 
@@ -749,6 +768,9 @@ main .more-info .more-info__container .part__3 button {
   }
   nav .nav__container .part__2 .search a {
     width: 20%;
+  }
+  main #type {
+    margin-left: 65rem;
   }
   main .pokemon__info #info {
     grid-auto-rows: 100%;
@@ -784,7 +806,10 @@ main .more-info .more-info__container .part__3 button {
 }
 
 @media screen and (max-width: 674px) {
-  main .more-info {
+  main .pokemon__types #types {
+    margin-left: 70rem;
+  }
+  .more-info {
     height: 60rem;
     width: 60rem;
   }
@@ -800,6 +825,9 @@ main .more-info .more-info__container .part__3 button {
 }
 
 @media screen and (max-width: 500px) {
+  main .pokemon__types #types {
+    margin-left: 80rem;
+  }
   main .more-info {
     height: 60rem;
     width: 50rem;
@@ -872,6 +900,9 @@ main .more-info .more-info__container .part__3 button {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
     margin-right: 2rem;
+  }
+  main .pokemon__types #types {
+    margin-left: 85rem;
   }
   main .more-info {
     width: 35rem;

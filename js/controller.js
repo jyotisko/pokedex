@@ -19,13 +19,13 @@ const setPokemonOnName = async function (name) {
     pokemonView.clear();
     const data = await model.getPokemonByName(name);
     pokemonView.renderMarkupPokemon(data);
+
   } catch (err) {
-    if (err.message === 'No pokemon found!')
-      swal({
-        title: 'No Pokemon Found!',
-        text: 'Search something else,\nexample: "pichu", "pikachu"',
-        icon: 'warning',
-      });
+    if (err.message === 'No pokemon found!') swal({
+      title: 'No Pokemon Found!',
+      text: 'Search something else,\nexample: "pichu", "pikachu"',
+      icon: 'error',
+    });
   }
 };
 
@@ -33,11 +33,17 @@ const showMoreInfo = async function (id, type, moves) {
   moreInfoView.generateMarkup(moves.split(','), type);
 };
 
+const showMoveInfo = async function (moveName) {
+  const data = await model.getMoveInfo(moveName);
+  moreInfoView.renderMoveInfo(data);
+};
+
 const init = () => {
   btnView.addHoverEffect();
   btnView.addHandlerType(setPokemonOnType);
   btnView.addHandlerSearch(setPokemonOnName);
   btnView.addHandlerMoreInfo(showMoreInfo);
+  moreInfoView.addHandlerMoveInfo(showMoveInfo);
 };
 
 init();

@@ -343,7 +343,8 @@ main {
          height: 100%;
          margin: 2rem 0;
          width: 100%;
-          span {
+         span {
+            cursor: pointer;
             text-transform: capitalize;
             font-size: 3rem;
             margin: 1rem;
@@ -576,15 +577,23 @@ main {
     grid-template-columns: 100%;
     grid-template-rows: 10% 90%;
     .pokemon__types {
+      overflow-x: scroll;
+      overflow-y: hidden;
       #types {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 60rem;
         .types {
+          width: 90%;
           display: flex;
           justify-content: center;
           align-content: center;
           ul {
             display: flex;
+            padding: 0 2rem;
             li {
-              margin: 0 1rem;
+              margin-left: 1.5rem;
             }
           }
         }
@@ -609,6 +618,9 @@ main {
     }
   }
   main {
+    #type {
+      margin-left: 65rem;
+    }
     .pokemon__info {
       #info {
         grid-auto-rows: 100%;
@@ -646,12 +658,18 @@ main {
 
 @media screen and (max-width: 674px) {
   main {
+    .pokemon__types {
+      #types {
+        margin-left: 70rem;
+        }
+      }
+    }
     .more-info {
       height: 60rem;
       width: 60rem;
-    }
   }
 }
+
 
 @media screen and (max-width: 624px) {
   nav {
@@ -673,6 +691,11 @@ main {
 
 @media screen and (max-width: 500px) {
   main {
+    .pokemon__types {
+      #types {
+        margin-left: 80rem;
+      }
+    }
     .more-info {
       height: 60rem;
       width: 50rem;
@@ -761,6 +784,11 @@ main {
     }
   }
   main {
+    .pokemon__types {
+      #types {
+        margin-left: 85rem;
+      }
+    }
     .more-info {
       width: 35rem;
       .more-info__container {

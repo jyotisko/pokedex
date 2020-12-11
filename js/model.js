@@ -55,11 +55,22 @@ export const getPokemonByName = async name => {
   }
 };
 
-export const getPokemonById = async id => {
+export const getMoveInfo = async move => {
   try {
+    const response = await fetch(`https://pokeapi.co/api/v2/move/${move}`);
+    const data = await response.json();
+
+    const effectChance = data.effect_chance;
+
+    return {
+      moveName: data.name,
+      accuracy: data?.accuracy ? data.accuracy : 'N/A',
+      descriptionFirst: data.effect_entries.map(effect => effect.effect.includes('$effect_chance') ? effect.effect.replace('$effect_chance', effectChance) : effect.effect),
+      descriptionSecond: data.effect_entries.map(effect => effect.short_effect.includes('$effect_chance') ? effect.short_effect.replace('$effect_chance', effectChance) : effect.short_effect),
+      effectChance: data.effect ? data.effect : 'N/A',
+    };
 
   } catch (err) {
     console.log(`${err} 💥💥💥`);
   }
-};
-
+}

@@ -9,6 +9,22 @@ class MoreInfoView {
     });
   }
 
+  addHandlerMoveInfo(handler) {
+    this._parentContainer.addEventListener('click', e => {
+      const move = e.target.closest('.move-span');
+      if (!move) return;
+      const moveName = move.dataset.move;
+      handler(moveName)
+    });
+  }
+
+  renderMoveInfo(data) {
+    swal({
+      title: data.moveName[0].toUpperCase() + data.moveName.slice(1),
+      text: `Effect Chance: ${data.effectChance}\nDescription: ${data.descriptionFirst.length > data.descriptionSecond.length ? data.descriptionSecond : data.descriptionFirst}`,
+    });
+  }
+
   generateMarkup(moves, type) {
 
     const strongAgainst = [];
@@ -76,7 +92,7 @@ class MoreInfoView {
               <div class="part__1">
                 <h1 style="text-align: center;">Moves</h1>
                 <div class="moves">
-                ${moves.map(move => `<span>${move}</span>`).join(' ')}
+                ${moves.map(move => `<span data-move="${move}" class="move-span">${move}</span>`).join(' ')}
                 </div>
                 </div>
                 <div class="part__2">
