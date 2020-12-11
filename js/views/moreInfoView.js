@@ -15,6 +15,7 @@ class MoreInfoView {
     const weakAgainst = [];
 
     if (type === 'normal') {
+      strongAgainst.push(...['Ghost', 'Fighting', 'Bug', 'Grass', 'Ground']);
       weakAgainst.push(...['Rock', 'Ghost', 'Steel']);
     } else if (type === 'fighting') {
       weakAgainst.push(...['Flying', 'Poison', 'Psychic', 'Bug', 'Ghost', 'Fairy']);
