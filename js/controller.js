@@ -5,13 +5,17 @@ import * as model from './model.js';
 
 
 const setPokemonOnType = async function (id) {
-  const data = await model.getPokemonsByType(id);
-  pokemonView.clear();
-  data.forEach(pokemon => {
-    pokemon.then(data => {
-      pokemonView.renderMarkupPokemon(data);
-    })
-  });
+  try {
+    const data = await model.getPokemonsByType(id);
+    pokemonView.clear();
+    data.forEach(pokemon => {
+      pokemon.then(data => {
+        pokemonView.renderMarkupPokemon(data);
+      })
+    });
+  } catch (err) {
+    console.error(`${err} 💥💥💥`);
+  }
 };
 
 const setPokemonOnName = async function (name) {
